@@ -713,6 +713,10 @@ ActionResult SoundEditor::potentialShortcutPadAction(int32_t x, int32_t y, bool 
 						item = NULL;
 					}
 				}
+				else if (true && x < 2 && y == 4) {
+					numericDriver.displayPopup(HAVE_OLED ? "Record shortcut disabled" : "CANT");
+					return ActionResult::DEALT_WITH;
+				}
 				else {
 					item = paramShortcutsForSounds[x][y];
 				}
